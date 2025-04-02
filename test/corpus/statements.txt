@@ -1,0 +1,16 @@
+==========
+Statements
+==========
+
+>>> import json
+>>> json.dumps({"foo": "bar"})
+'{"foo": "bar"}'
+
+---
+
+(docstring
+  (statement
+    (statement_content))
+  (statement
+    (statement_content)
+	(statement_result)))

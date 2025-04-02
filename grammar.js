@@ -14,8 +14,14 @@ module.exports = grammar({
   name: "pydoc",
 
   rules: {
-    docstring: $ => choice($.statement, $._text),
-    statement: $ => seq($._statement_line, optional(repeat($._statement_line_continued)), optional($.statement_result)),
+    docstring: $ => repeat(choice($.statement, $._text)),
+    statement: $ => prec.right(
+      2,
+      seq(
+        $._statement_line,
+        optional(repeat($._statement_line_continued)),
+        optional($.statement_result)),
+    ),
 
     _statement_line: $ => seq($._prompt, $.statement_content, NEWLINE),
     _statement_line_continued: $ => seq($._prompt_contd, $.statement_content, NEWLINE),
