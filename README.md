@@ -26,4 +26,9 @@ Configure your editor using injections, required for Python and Pydoc.
   (statement
     (statement_content) @injection.content)
     (#set! injection.language "python"))
+
+(docstring
+  (statement
+    (statement_result) @injection.content)
+    (#set! injection.language "python"))
 ```
