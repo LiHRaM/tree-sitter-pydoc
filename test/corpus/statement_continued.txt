@@ -1,0 +1,13 @@
+===================
+Statement Continued
+===================
+
+>>> class MyClass:
+...     """Class documentation"""
+
+---
+
+(docstring
+  (statement
+    (statement_content)
+    (statement_content)))

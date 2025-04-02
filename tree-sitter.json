@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pydoc",
+      "camelcase": "Pydoc",
+      "title": "Pydoc",
+      "scope": "source.pydoc",
+      "file-types": [
+        "pydoc"
+      ],
+      "injection-regex": "^pydoc$",
+      "class-name": "TreeSitterPydoc"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Python Documentation Format",
+    "authors": [
+      {
+        "name": "Hilmar Gústafsson",
+        "email": "LiHRaM@users.noreply.github.com",
+        "url": "https://hilmargustafs.com/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/LiHRaM/tree-sitter-pydoc"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
